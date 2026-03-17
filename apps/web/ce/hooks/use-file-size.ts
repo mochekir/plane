@@ -4,20 +4,13 @@
  * See the LICENSE file for details.
  */
 
-// plane imports
-import { MAX_FILE_SIZE } from "@plane/constants";
-// hooks
-import { useInstance } from "@/hooks/store/use-instance";
-
 type TReturnProps = {
   maxFileSize: number;
 };
 
-export const useFileSize = (): TReturnProps => {
-  // store hooks
-  const { config } = useInstance();
+// No file size restriction - set to 500MB
+const UNLIMITED_FILE_SIZE = 500 * 1024 * 1024; // 500MB
 
-  return {
-    maxFileSize: config?.file_size_limit ?? MAX_FILE_SIZE,
-  };
-};
+export const useFileSize = (): TReturnProps => ({
+  maxFileSize: UNLIMITED_FILE_SIZE,
+});

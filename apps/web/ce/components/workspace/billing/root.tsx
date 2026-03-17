@@ -52,8 +52,8 @@ export const BillingRoot = observer(function BillingRoot() {
         />
         <div className="mt-6">
           <SettingsBoxedControlItem
-            title="Community"
-            description="Unlimited projects, issues, cycles, modules, pages, and storage"
+            title="Enterprise"
+            description="All features unlocked — unlimited projects, issues, cycles, modules, pages, storage, and integrations"
           />
         </div>
       </div>
